@@ -1,0 +1,15 @@
+# This is a starter workflow for calling melody validation pipeline, 
+# if your melody's folder is not in the root folder of the repo add to the `with` part - melodyFolder: <path to melody folder>
+name: validate-melody-organization-ci
+
+on:
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  melody-validate:
+    name: "call validation pipeline"
+    uses: Comocomo/nutrino-serverless-plugin/.github/workflows/validation-pipeline.yml@main
+    with:
+      repo: ${{ github.event.repository.name }}
+      branch: ${{ github.event.pull_request.head.ref }}
