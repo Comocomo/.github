@@ -1,5 +1,10 @@
 {
     "name": "Melody Validation Workflow",
     "description": "Melody validation starter workflow",
-    "iconName": octicon rocket
+    "iconName": octicon rocket,
+    "categories": [
+        "testing",
+        "code-review",
+        "continuous-integration"
+    ]
 }
